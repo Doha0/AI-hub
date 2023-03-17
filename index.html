@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI_universe</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5f43f0c16a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container mx-auto">
+    <!-- Header section -->
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-semibold my-6">AI Universe Hub</h1>
+        <button id="sort-date" onclick="sortByDate()" class="btn btn-error text-white mb-6">Sort By Date</button>
+        <!-- Spinner -->
+        <section>
+            <button id="spinner" class="btn btn-lg btn-error text-white btn-square loading hidden"></button>
+        </section>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!-- cards -->
+        <section id="ai-card-container" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+
+        </section>
+
+        <!-- Modal -->
+        <section>
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="modal-id" class="modal-toggle" />
+            <div class="modal">
+                <div class="modal-box relative w-fit max-w-lg md:max-w-5xl h-fit p-2 md:p-8">
+                    <label for="modal-id" class="btn btn-sm btn-circle absolute right-2 top-2 z-10">✕</label>
+
+                    <div id="modal-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-0 md:p-8">
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seemore -->
+        <div id="see-more" class="text-center hidden">
+            <button id="btn-see-more" class="btn btn-error text-white" onclick="seeMore()">See More</button>
+        </div>
+
+
+
+    </main>
+
+    <script src="js/ai-universe.js"></script>
+</body>
+
+</html>
